@@ -221,6 +221,8 @@
     container.classList.add("playing");
     setTimeout(() => container.addEventListener("click", cancelHandler), 0);
 
+    const sheetObjectUrls = [];
+
     try {
       const { serverUrl, apiKey } = credentials;
       const { Trickplay, RunTimeTicks } = item;
@@ -239,17 +241,30 @@
        * @type {HTMLImageElement[]}
        */
       const sheets = await Promise.all(
-        Array.from(Array(sheetCount))
-          .map((_, i) => `${serverUrl}/Videos/${item.Id}/Trickplay/${resolution}/${i}.jpg?api_key=${apiKey}`)
-          .map(
-            (url) =>
-              new Promise((resolve, reject) => {
-                const img = new Image();
-                img.onload = () => resolve(img);
-                img.onerror = (err) => reject(err);
-                img.src = url;
-              }),
-          ),
+        Array.from(Array(sheetCount)).map(async (_, i) => {
+          const url = `${serverUrl}/Videos/${item.Id}/Trickplay/${resolution}/${i}.jpg`;
+          const response = await fetch(url, {
+            headers: {
+              Authorization: `MediaBrowser Token="${apiKey}"`,
+            },
+          });
+
+          if (!response.ok) {
+            throw new Error(
+              `Failed to load trickplay sheet ${i}: ${response.status} ${response.statusText}`,
+            );
+          }
+
+          const objectUrl = URL.createObjectURL(await response.blob());
+          sheetObjectUrls.push(objectUrl);
+
+          return new Promise((resolve, reject) => {
+            const img = new Image();
+            img.onload = () => resolve(img);
+            img.onerror = (err) => reject(err);
+            img.src = objectUrl;
+          });
+        }),
       );
       const framesNeeded = Math.floor(settings.PreviewDuration / frameDuration);
       if (frameCount > framesNeeded) {
@@ -281,6 +296,10 @@
         }
       } while (!cancel && settings.LoopPreview);
     } finally {
+      for (const objectUrl of sheetObjectUrls) {
+        URL.revokeObjectURL(objectUrl);
+      }
+
       mask.removeChild(sprite);
       container.removeChild(mask);
       container.removeEventListener("click", cancelHandler);
