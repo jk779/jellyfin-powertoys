@@ -9,6 +9,14 @@
     "imageUrl": "https://raw.githubusercontent.com/lennykean/jellyfin-powertoys/main/logo.png",
     "versions": [
       {
+        "version": "1.3.0.1",
+        "changelog": "Fix trickplay thumbnail previews",
+        "targetAbi": "10.11.9.0",
+        "sourceUrl": "https://github.com/jk779/jellyfin-powertoys/releases/download/v1.3.0.1/JellyfinPowertoys.CastCurator.zip",
+        "checksum": "155c0314a793e8f5fa543384c2588125",
+        "timestamp": "2026-09-11T11:57:02Z"
+      },
+      {
         "version": "1.3.0.0",
         "changelog": "upgrade to jellyfin 10.11.9",
         "targetAbi": "10.11.9.0",
@@ -155,6 +163,14 @@
     "overview": "Automatically organize your library by studio.",
     "imageUrl": "https://raw.githubusercontent.com/lennykean/jellyfin-powertoys/main/logo.png",
     "versions": [
+      {
+        "version": "1.3.0.1",
+        "changelog": "Fix trickplay thumbnail previews",
+        "targetAbi": "10.11.9.0",
+        "sourceUrl": "https://github.com/jk779/jellyfin-powertoys/releases/download/v1.3.0.1/JellyfinPowertoys.StudioCurator.zip",
+        "checksum": "ee31cf61acdbbd390060a8ce03892874",
+        "timestamp": "2026-09-11T11:57:02Z"
+      },
       {
         "version": "1.3.0.0",
         "changelog": "upgrade to jellyfin 10.11.9",
@@ -303,6 +319,14 @@
     "imageUrl": "https://raw.githubusercontent.com/lennykean/jellyfin-powertoys/main/logo.png",
     "versions": [
       {
+        "version": "1.3.0.1",
+        "changelog": "Fix trickplay thumbnail previews",
+        "targetAbi": "10.11.9.0",
+        "sourceUrl": "https://github.com/jk779/jellyfin-powertoys/releases/download/v1.3.0.1/JellyfinPowertoys.PrivacyMode.zip",
+        "checksum": "487f02d2d91a69f443a3864e846dc219",
+        "timestamp": "2026-09-11T11:57:02Z"
+      },
+      {
         "version": "1.3.0.0",
         "changelog": "upgrade to jellyfin 10.11.9",
         "targetAbi": "10.11.9.0",
@@ -449,6 +473,14 @@
     "overview": "Enables playback of remote trailers from any source.",
     "imageUrl": "https://raw.githubusercontent.com/lennykean/jellyfin-powertoys/main/logo.png",
     "versions": [
+      {
+        "version": "1.3.0.1",
+        "changelog": "Fix trickplay thumbnail previews",
+        "targetAbi": "10.11.9.0",
+        "sourceUrl": "https://github.com/jk779/jellyfin-powertoys/releases/download/v1.3.0.1/JellyfinPowertoys.RemoteTrailers.zip",
+        "checksum": "44d021ce807bb2c156325a711ecf6d52",
+        "timestamp": "2026-09-11T11:57:02Z"
+      },
       {
         "version": "1.3.0.0",
         "changelog": "upgrade to jellyfin 10.11.9",
@@ -597,6 +629,14 @@
     "imageUrl": "https://raw.githubusercontent.com/lennykean/jellyfin-powertoys/main/logo.png",
     "versions": [
       {
+        "version": "1.3.0.1",
+        "changelog": "Fix trickplay thumbnail previews",
+        "targetAbi": "10.11.9.0",
+        "sourceUrl": "https://github.com/jk779/jellyfin-powertoys/releases/download/v1.3.0.1/JellyfinPowertoys.ThumbnailPreviews.zip",
+        "checksum": "72ded1e8e9a5b000d670b0402ba1ff61",
+        "timestamp": "2026-09-11T11:57:02Z"
+      },
+      {
         "version": "1.3.0.0",
         "changelog": "upgrade to jellyfin 10.11.9",
         "targetAbi": "10.11.9.0",
@@ -744,6 +784,14 @@
     "imageUrl": "https://raw.githubusercontent.com/lennykean/jellyfin-powertoys/main/logo.png",
     "versions": [
       {
+        "version": "1.3.0.1",
+        "changelog": "Fix trickplay thumbnail previews",
+        "targetAbi": "10.11.9.0",
+        "sourceUrl": "https://github.com/jk779/jellyfin-powertoys/releases/download/v1.3.0.1/JellyfinPowertoys.WatchHistoryJanitor.zip",
+        "checksum": "829e51924b69f7f63fb46bbd43cef238",
+        "timestamp": "2026-09-11T11:57:02Z"
+      },
+      {
         "version": "1.3.0.0",
         "changelog": "upgrade to jellyfin 10.11.9",
         "targetAbi": "10.11.9.0",
@@ -890,6 +938,14 @@
     "overview": "Simplified tag management. Add, remove, and manage tags right from the context menu.",
     "imageUrl": "https://raw.githubusercontent.com/lennykean/jellyfin-powertoys/main/logo.png",
     "versions": [
+      {
+        "version": "1.3.0.1",
+        "changelog": "Fix trickplay thumbnail previews",
+        "targetAbi": "10.11.9.0",
+        "sourceUrl": "https://github.com/jk779/jellyfin-powertoys/releases/download/v1.3.0.1/JellyfinPowertoys.JellyTag.zip",
+        "checksum": "441891900274263c91e4c9233af367ef",
+        "timestamp": "2026-09-11T11:57:02Z"
+      },
       {
         "version": "1.3.0.0",
         "changelog": "upgrade to jellyfin 10.11.9",
