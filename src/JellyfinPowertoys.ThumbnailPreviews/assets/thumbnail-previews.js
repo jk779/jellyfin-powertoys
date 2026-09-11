@@ -99,7 +99,8 @@
     const url = new URL(`${credentials.serverUrl}/Items`);
     url.searchParams.set("ServerId", serverId);
     url.searchParams.set("Ids", itemId);
-    url.searchParams.set("Fields", "Trickplay,RemoteTrailers");
+    url.searchParams.append("Fields", "Trickplay");
+    url.searchParams.append("Fields", "RemoteTrailers");
 
     const response = await fetch(url, {
       headers: {
@@ -129,8 +130,8 @@
    */
   function initPreview(sprite, mask, trickplay) {
     const { TileWidth, TileHeight } = trickplay;
-    const frameWidth = trickplay.Width / TileWidth;
-    const frameHeight = trickplay.Height / TileHeight;
+    const frameWidth = trickplay.Width;
+    const frameHeight = trickplay.Height;
 
     const containerRect = mask.parentElement.getBoundingClientRect();
     const containerWidth = containerRect.width;
@@ -166,8 +167,8 @@
    */
   function showFrame(frame, sprite, mask, trickplay, sheets) {
     const { TileWidth, TileHeight } = trickplay;
-    const frameWidth = trickplay.Width / TileWidth;
-    const frameHeight = trickplay.Height / TileHeight;
+    const frameWidth = trickplay.Width;
+    const frameHeight = trickplay.Height;
 
     const framesPerSheet = TileWidth * TileHeight;
     const sheetIndex = Math.floor(frame / framesPerSheet);
@@ -186,8 +187,8 @@
 
     const scaledFrameWidth = frameWidth * scale;
     const scaledFrameHeight = frameHeight * scale;
-    const scaledSheetWidth = trickplay.Width * scale;
-    const scaledSheetHeight = trickplay.Height * scale;
+    const scaledSheetWidth = trickplay.Width * TileWidth * scale;
+    const scaledSheetHeight = trickplay.Height * TileHeight * scale;
 
     sprite.style.backgroundImage = `url(${sheets[sheetIndex].src})`;
     sprite.style.backgroundSize = `${scaledSheetWidth}px ${scaledSheetHeight}px`;
